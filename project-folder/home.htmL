@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movie Feedback - Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">🎬 MovieFeedback</div>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="index.html">Sign In</a></li>
+        <li><a href="index.html" onclick="toggleSignup()">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+<br><br>
+    <h1>Welcome to Movie Feedback</h1>
+    <p>Rate your favorite movies and see what others think!</p>
+      </section>
+
+  <section id="about" class="about-section">
+    <h2>About This Project</h2>
+    <p>This Movie Feedback web application allows users to log in, rate movies with stars, and share comments. All feedback is stored in the browser using local storage. It's a simple, fun, and interactive way to express your thoughts about the movies you love.</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Movies Feedback App </p>
+  </footer>
+
+  <script>
+    function toggleSignup() {
+      localStorage.setItem("signupRedirect", "true");
+    }
+  </script>
+</body>
+</html>

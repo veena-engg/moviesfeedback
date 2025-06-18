@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Movie Feedback</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎥 Movie Feedback</h1>
+
+    <form id="feedbackForm">
+      <label for="movie">Movie:</label>
+      <select id="movie" required>
+        <option value="">-- Select a Movie --</option>
+        <option value="When life gives you tangerines">When life gives you tangerines</option>
+        <option value="Heavenly Ever After">Premam</option>
+        <option value="Good Boy">Good Boy</option>
+        <option value="MAD2">MAD2</option>
+        <option value="Dragon">Dragon</option>
+        <option value="Newtopiea">Newtopiea</option>
+        <option value="Crash Landing On You">Crash Landing On You</option>
+        <option value="Interstellar">Interstellar</option>
+      </select>
+
+      <label for="rating">Rating:</label>
+      <div class="stars" id="stars">
+        <span data-value="1">&#9733;</span>
+        <span data-value="2">&#9733;</span>
+        <span data-value="3">&#9733;</span>
+        <span data-value="4">&#9733;</span>
+        <span data-value="5">&#9733;</span>
+      </div>
+
+      <label for="comment">Comments:</label>
+      <textarea id="comment" placeholder="Your thoughts..." required></textarea>
+
+      <button type="submit">Submit Feedback</button>
+    </form>
+
+    <h2>All Feedback</h2>
+    <div id="feedbackList"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

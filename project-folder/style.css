@@ -1,0 +1,212 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url('movies.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* ====== NAVBAR ====== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000000cc;
+  padding: 15px 30px;
+  color: white;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+/* ====== HERO SECTION ====== */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  min-height: 50vh;
+}
+
+.hero h1 {
+color:white;
+  font-size: 42px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.buttons .btn {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  margin: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.buttons .btn:hover {
+  background-color: #218838;
+}
+
+/* ====== ABOUT SECTION ====== */
+.about-section {
+  padding: 40px 20px;
+  background: #ffffffcc;
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: white;
+  background: rgba(0, 0, 0, 0.8);
+  margin-top: 50px;
+}
+
+/* ====== LOGIN/SIGNUP FORM ====== */
+.login-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 400px;
+  width: 100%;
+  background: #ffffffcc;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 16px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* ====== Login Feedback Messages ====== */
+#formMessage {
+  margin-top: 15px;
+  font-size: 14px;
+  display: none;
+}
+
+#formMessage.success {
+  background-color: #d4edda;
+  color: #155724;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#formMessage.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* ====== Feedback Page Styling ====== */
+.container {
+  max-width: 600px;
+  background: #ffffffcc;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+h1, h2 {
+  text-align: center;
+  color: #222;
+}
+
+textarea, select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0 16px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.stars span {
+  font-size: 25px;
+  cursor: pointer;
+  color: lightgray;
+}
+
+.stars span.selected {
+  color: gold;
+}
+
+#feedbackList .feedback-item {
+  background: #eee;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.feedback-item strong {
+  font-size: 18px;
+}
+
+.feedback-item .star {
+  color: gold;
+  margin-left: 5px;
+}

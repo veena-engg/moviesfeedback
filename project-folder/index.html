@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login / Signup</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Movie Feedback Login</h2>
+
+    <form id="loginForm">
+      <input type="email" id="loginEmail" placeholder="Enter Email" required />
+      <input type="password" id="loginPassword" placeholder="Enter Password" required />
+      <button type="submit">Login</button>
+    </form>
+
+    <p>Don't have an account? <a href="#" onclick="toggleForm()">Sign up here</a></p>
+
+    <form id="signupForm" style="display:none;">
+      <input type="email" id="signupEmail" placeholder="Enter Email" required />
+      <input type="password" id="signupPassword" placeholder="Create Password" required />
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <div id="formMessage"></div>
+  </div>
+
+  <script>
+    function toggleForm() {
+      document.getElementById("loginForm").style.display = "none";
+      document.getElementById("signupForm").style.display = "block";
+      const msg = document.getElementById("formMessage");
+      msg.textContent = "";
+      msg.className = "";
+    }
+
+    document.getElementById("signupForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const email = document.getElementById("signupEmail").value;
+      const password = document.getElementById("signupPassword").value;
+
+      localStorage.setItem("email", email);
+      localStorage.setItem("password", password);
+      localStorage.setItem("userEmail", email); // store for feedback use
+
+      const msg = document.getElementById("formMessage");
+      msg.textContent = "Signup successful. You can now login.";
+      msg.className = "success";
+
+      document.getElementById("signupForm").style.display = "none";
+      document.getElementById("loginForm").style.display = "block";
+    });
+
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const email = document.getElementById("loginEmail").value;
+      const password = document.getElementById("loginPassword").value;
+      const storedEmail = localStorage.getItem("email");
+      const storedPassword = localStorage.getItem("password");
+
+      const msg = document.getElementById("formMessage");
+
+      if (email === storedEmail && password === storedPassword) {
+        localStorage.setItem("userEmail", email);
+        window.location.href = "feedback.html";
+      } else {
+        msg.textContent = "Invalid email or password.";
+        msg.className = "error";
+      }
+    });
+  </script>
+</body>
+</html>
